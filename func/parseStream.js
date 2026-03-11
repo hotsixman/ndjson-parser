@@ -3,7 +3,7 @@
  * @param {ReadableStream<Uint8Array>} stream
  * @returns {Promise<T[]>}
  */
-async function parseStream(stream) {
+export async function parseStream(stream) {
     const reader = stream.getReader();
     /** @type {T[]} */const dataArray = [];
     const decoder = new TextDecoder();
